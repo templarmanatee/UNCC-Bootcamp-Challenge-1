@@ -2,13 +2,6 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
-
 This project was motivated by a desire to clean up existing code and make it more accessible. In its prior condition, the code was confusing to read through and
 not properly organized into specific html semantic elements. The CSS file also needed work, so it has been updated to more properly reflect the organization of the html. 
 The website will now be much easier to maintain and upgrade in the future without confusion. I learned better how to refactor and format an html webpage as well as a stylesheet.
@@ -20,7 +13,11 @@ What are the steps required to install your project? Provide a step-by-step desc
 
 ## Usage
 
-To access 
+To access the site, go to https://templarmanatee.github.io/UNCC-Bootcamp-Challenge-1/.
+The GitHub repository can be viewed at https://github.com/templarmanatee/UNCC-Bootcamp-Challenge-1. 
+
+This site lays the framework for a landing page for Horiseon. The 3 links in the nav scroll the 
+viewport down to their respective sections. 
 
 ## Credits
 
