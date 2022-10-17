@@ -1,62 +1,158 @@
+/*  All elements: 
+        width and height properties include content, padding, and border, but not the margin
+    Removed padding and margin properties, as their default is already 0. 
+*/
 * {
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
 }
 
+/* Body Rule
+    -This sets the background color of the document to #d9dcd6 
+*/
 body {
     background-color: #d9dcd6;
 }
 
-.header {
+/*  -Sets the padding to 20px
+    -Chooses from a selection of font families for the header to use
+    -Sets the background-color of the header element to #2a607c
+    -Sets 'Hori' and 'n' characters in company name to #ffffff
+*/
+header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #2a607c;
     color: #ffffff;
 }
 
-.header h1 {
+/* 
+    All h1 elements in the header display inline in their own block.
+    They have a font size of 48px
+*/
+header h1 {
     display: inline-block;
     font-size: 48px;
 }
 
-.header h1 .seo {
+/* Sets the 'seo' in the company logo to #d9dcd6 */
+header h1 .seo {
     color: #d9dcd6;
 }
 
-.header div {
-    padding-top: 15px;
+/*  This formats the nav bar at the top of the page. 
+    
+    Updated header div to nav semantic element and changed padding to 30px to match the mockup*/
+header nav {
+    padding-top: 30px;
     margin-right: 20px;
     float: right;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
 }
 
-.header div ul {
-    list-style-type: none;
-}
+/* Removed defunct header nav ul rule */ 
 
-.header div ul li {
+/* Updated header div to nav semantic element */
+header nav ul li {
     display: inline-block;
     margin-left: 25px;
 }
 
+/*  
+    Changed height tag to auto to better work with smaller screens
+*/
+.banner-image {
+    height: auto;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+/* 
+    This sets the width of the section blocks to 75% of the viewport, makes the text display as inline blocks, and gives the main element a left margin of 20px.  
+*/
+main {
+    width: 75%;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+/*
+    This creates the styling for the sections within main, giving them sizing, a font, a background color, and a text color.
+*/ 
+.main-section {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+}
+
+/*
+    Formats the images within the sections in main.
+*/
+.main-section img {
+    max-height: 200px;
+}
+
+/*
+    Formats the headers in the sections in the main element.
+*/
+.main-section h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+/*
+    Formats the side bar containing the benefits sections
+*/
+aside {
+    margin-right: 20px;
+    padding: 20px;
+    clear: both;
+    float: right;
+    width: 20%;
+    height: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #2589bd;
+}
+
+/*
+    Formats the benefits sections with a 32px margin and white text
+*/
+.benefits-section {
+    margin-bottom: 32px; 
+    color: #ffffff; 
+}
+
+.benefits-section h3 {
+    margin-bottom: 10px; 
+    text-align: center;
+}
+
+.benefits-section img {
+    display: block;
+    margin: 10px auto;
+    max-width: 150px;    
+}
+
+.footer {
+    padding: 30px;
+    clear: both;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.footer h4 {
+    font-size: 20px;
+}
+
 a {
     color: #ffffff;
-    text-decoration: none;
 }
 
 p {
     font-size: 16px;
-}
-
-.hero {
-    height: 800px;
-    width: 100%;
-    margin-bottom: 25px;
-    background-image: url("../images/digital-marketing-meeting.jpg");
-    background-size: cover;
-    background-position: center;
 }
 
 .float-left {
@@ -69,132 +165,3 @@ p {
     margin-left: 25px;
 }
 
-.content {
-    width: 75%;
-    display: inline-block;
-    margin-left: 20px;
-}
-
-.benefits {
-    margin-right: 20px;
-    padding: 20px;
-    clear: both;
-    float: right;
-    width: 20%;
-    height: 100%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #2589bd;
-}
-
-.benefit-lead {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-brand {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-cost {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-lead h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-brand h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-cost h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-lead img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.benefit-brand img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.benefit-cost img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.search-engine-optimization {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.online-reputation-management {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.social-media-marketing {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.search-engine-optimization img {
-    max-height: 200px;
-}
-
-.online-reputation-management img {
-    max-height: 200px;
-}
-
-.social-media-marketing img {
-    max-height: 200px;
-}
-
-.search-engine-optimization h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.online-reputation-management h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.social-media-marketing h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.footer {
-    padding: 30px;
-    clear: both;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;
-}
-
-.footer h2 {
-    font-size: 20px;
-}
